@@ -11,6 +11,7 @@ export default function Home() {
     const marketplaceAddress = chainId ? networkMapping[chainString].NftMarketplace[0] : null
 
     const { loading, error, data: listedNfts } = useQuery(GET_ACTIVE_ITEMS)
+    console.log('listedNfts', listedNfts);
 
     return (
         <div className="container mx-auto">
@@ -20,7 +21,7 @@ export default function Home() {
                     loading || !listedNfts ? (
                         <div>Loading...</div>
                     ) : (
-                        listedNfts.activeItems.map((nft) => {
+                        listedNfts.itemListeds?.map((nft) => {
                             const { price, nftAddress, tokenId, seller } = nft
                             return marketplaceAddress ? (
                                 <NFTBox
