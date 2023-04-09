@@ -5,11 +5,11 @@
   "homepage": "https://jianpanxia233.github.io/nextjs-nft-marketplace",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && node scripts/add_nojekyll_file.js",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "gh-pages -d out"
+    "deploy": "node add_nojekyll_file.js"
   },
   "dependencies": {
     "gh-pages": "^3.2.0",
