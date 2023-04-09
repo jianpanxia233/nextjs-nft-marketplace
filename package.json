@@ -5,7 +5,7 @@
   "homepage": "https://jianpanxia233.github.io/nextjs-nft-marketplace",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build && next export && node scripts/add_nojekyll_file.js",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
